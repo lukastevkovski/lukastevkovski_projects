@@ -1,0 +1,9 @@
+Colors:
+
+background-color: #302d2d;
+background-color: #007bff;
+background-color: #0056b3; (hover)
+
+svg {
+  fill: white;
+}
