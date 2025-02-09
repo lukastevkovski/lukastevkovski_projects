@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.img_wrap {
+  margin: 0%;
+  padding: 0%;
+  height: 275px;
+}
+.image {
+  width: 100%;
+  height: 300px;
+  margin: 0px;
+}
+
+.head_section {
+  background-color: #333333;
+  height: 300px;
+  padding: 100px;
+  text-align: center;
+}
+
+.head_section > h1 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
+.search-element {
+  border-radius: 5px;
+  width: 15%;
+  height: 25px;
+}
+
+.btn:hover {
+  background-color: #333333;
+  transition: 1s;
+}
+
+.btn {
+  background-color: #cccccc;
+  color: white;
+}
+
+.main_section {
+  background-color: #f8f8f8;
+  padding: 5px;
+}
+
+.post_wrap {
+  background-color: white;
+  border-radius: 10px;
+
+  width: 50%;
+  height: 600px;
+  margin: 30px 25%;
+}
+.post_wrap > div > h2 {
+  padding-left: 30px;
+  padding-top: 25px;
+}
+
+.post_wrap p:nth-of-type(1) {
+  color: #cfcf22;
+  padding-left: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.post_wrap p a {
+  color: #cfcf22;
+  text-decoration: none;
+}
+.post_wrap p:nth-of-type(2) {
+  color: #d2d2d2;
+  padding-left: 30px;
+  font-size: 15px;
+}
+
+.post_wrap p:nth-of-type(3) {
+  padding: 0 30px;
+}
+
+.btn_action {
+  color: white;
+  background-color: #333333;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.btn_action:hover {
+  background-color: #545353;
+  cursor: pointer;
+}
+.likeBtn {
+  margin-left: 30px;
+}
+.btn_action a {
+  color: white;
+  text-decoration: none;
+}
+.divider {
+  border-top: 2px solid #ccc;
+  margin: 20px 30px;
+  width: 695px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #333333;
+}
+
+.icon-wrap > a {
+  margin-left: 10px;
+  color: #cfcf22;
+}
+
+footer div p {
+  color: white;
+}
+
+.main_post {
+  text-align: center;
+  padding: 80px;
+}
+
+.main_post div p {
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: start;
+}
+
+.secDivider {
+  border-top: 2px solid #ccc;
+  margin: 20px auto;
+  width: 960px;
+}
+
+.icons a {
+  margin-left: 30px;
+  color: #333333;
+}
+
+.main_post li {
+  text-align: start;
+  margin: 0 200px;
+}
+
+.icons a:hover {
+  color: #cfcf22;
+  transition: 1s;
+}
