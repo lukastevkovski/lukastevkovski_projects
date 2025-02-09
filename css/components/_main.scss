@@ -1,0 +1,62 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.main-wrap {
+  padding-left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative; // Ensures it does not override the z-index of .nav-wrap
+  z-index: 1; // Keeps it below the nav
+  @include mixins.tablet-styles {
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var.$text-color-secondary;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 1 1 33.33%; // Default: three items per row
+    @include mixins.tablet-styles {
+      flex: 1 1 50%;
+      &:last-child {
+        flex: 0 1 50%;
+      }
+    }
+    @include mixins.mobile-l-styles {
+      flex: 1 1 100%;
+      &:last-child {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+  }
+
+  img {
+    width: 100%;
+    transition: opacity 0.2s;
+    z-index: 999;
+    display: flex;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
