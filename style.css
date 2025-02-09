@@ -1,0 +1,549 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  line-height: 1.6;
+  margin: 0;
+}
+
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  top: 0;
+}
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu i {
+  font-size: 24px;
+  color: #000;
+}
+.nav-wrap {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+/* Remove background color from dropdown button */
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  text-align: left; /* Align text to the left */
+  background: none; /* Remove background */
+  color: #000; /* Black text color */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* White background for dropdown menu */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left; /* Align text in the dropdown to the left */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center; /* Center-align the text */
+  font-size: 16px; /* Set the font size to be uniform */
+  font-family: "Ubuntu Mono", monospace; /* Ensure font consistency */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Light gray hover effect */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 12px;
+  text-align: center; /* Center-align the text */
+  font-size: 16px; /* Set the font size to be uniform */
+  font-family: "Ubuntu Mono", monospace;
+}
+.navigation a:not(:last-child) {
+  margin-left: 10px;
+}
+
+.section-txt {
+  background-color: #f9f9f9; /* Light gray background */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center-align the text */
+  padding: 20px; /* Add some padding for breathing space */
+  height: 70vh; /* Take up 70% of the viewport height */
+}
+
+.txt-wrap {
+  max-width: 800px; /* Limit the content width */
+  margin: 0 auto; /* Ensure the content is centered */
+}
+
+.section-txt h2 {
+  font-size: 32px; /* Large font size for the heading */
+  font-weight: 700; /* Bold font */
+  color: #000; /* Black text color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.section-txt p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.8;
+}
+
+.header-btn {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  background-color: rgb(48, 47, 47);
+  margin-top: 25px;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+  cursor: pointer;
+  color: white;
+}
+
+/* Third Section - Box Section */
+/* Third Section - Box Section */
+/* Third Section - Box Section */
+.box-section {
+  background-color: #ffffff; /* White background */
+  padding: 60px 20px; /* Add spacing */
+  display: flex; /* Flex container */
+  justify-content: center; /* Center all boxes */
+  align-items: center; /* Vertically align */
+}
+
+.box-wrapp {
+  display: flex; /* Ensure boxes are in a row */
+  justify-content: space-between; /* Add space between boxes */
+  gap: 20px; /* Space between boxes */
+}
+
+.box-wrapp div {
+  width: 300px; /* Wider boxes */
+  min-width: 200px; /* Ensure minimum width for responsiveness */
+  background-color: #f5f5f5; /* Default light gray background */
+  padding: 40px 20px; /* Increased padding for better proportions */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  color: #ffffff; /* Text color for contrast */
+  font-family: "Ubuntu Mono", monospace; /* Font style */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.box-wrapp div:nth-child(1) {
+  background-color: rgb(255, 84, 68);
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3); /* Vibrant Orange */
+}
+
+.box-wrapp div:nth-child(2) {
+  background-color: rgb(170, 45, 182);
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3); /* Purple */
+}
+
+.box-wrapp div:nth-child(3) {
+  background-color: rgb(30, 194, 164);
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3); /* Green */
+}
+
+.box-wrapp div:nth-child(4) {
+  background-color: rgb(39, 139, 224); /* Blue */
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+}
+
+.box-wrapp h1 {
+  font-size: 36px; /* Large numbers */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.box-wrapp p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.box-wrapp h1 {
+  font-size: 36px; /* Large numbers */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.box-wrapp p {
+  font-size: 16px;
+  font-weight: 400;
+}
+/* Section Styles */
+/* Section Styles */
+.demo-section {
+  text-align: center;
+  background-color: #f9f9f9; /* Light background color */
+  padding: 70px;
+  margin: 0 auto;
+  /* Ensure text is readable on the light background */
+}
+
+.demo-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333; /* Make the heading stand out */
+}
+
+/* Buttons Container */
+.demo-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  flex-wrap: wrap; /* Ensure buttons wrap if necessary */
+  gap: 10px; /* Add spacing between buttons */
+  margin-bottom: 30px; /* Space below buttons */
+}
+
+.demo-buttons a button {
+  background-color: #e1e2e2; /* Dark background for buttons */
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 1px 5px 2px rgba(70, 70, 70, 0.43);
+  border: none;
+  padding: 10px 20px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.demo-buttons a:nth-of-type(1) button {
+  background-color: #000;
+  color: white;
+}
+
+.demo-buttons a button:hover {
+  background-color: rgb(45, 45, 45);
+  color: white;
+}
+
+/* Grid Layout */
+.img-gallery {
+  display: flex;
+  background-color: rgb(246, 246, 246);
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 40px; /* Spacing between cards */
+  justify-content: center; /* Center cards horizontally */
+  max-width: 1000px; /* Set a max width for the gallery */
+  margin: 0 auto; /* Center the gallery in the container */
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(
+    33.33% - 20px
+  ); /* Ensure three cards fit in one row, accounting for the gap */
+  max-width: 300px; /* Optional: Limit max card size */
+  text-align: center;
+}
+
+/* Optional: Responsive Design */
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  outline: 2px solid black;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-text {
+  padding: 15px;
+  text-align: center;
+  background: #fefbfb;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Additional Features Section */
+/* Features Section */
+.features-section {
+  background-color: white;
+  padding: 60px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(48, 47, 47); /* Dark text */
+  margin-bottom: 20px;
+}
+
+.features-section p {
+  font-size: 1.2rem;
+  color: rgb(48, 47, 47);
+  margin-bottom: 40px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+  gap: 60px;
+}
+
+.features-list ul {
+  list-style-type: none;
+  padding: 0; /* Remove excessive padding */
+  margin: 0;
+  color: rgb(48, 47, 47);
+}
+
+.features-list ul li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: left;
+  position: relative;
+  text-transform: uppercase;
+  padding-left: 25px; /* Space for the arrow */
+}
+
+.features-list ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 15px;
+  height: 15px;
+  background-image: url("./arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Footer Section */
+footer {
+  background-color: #2d2d2d; /* Dark gray background */
+  color: white; /* White text color */
+  padding: 60px 0; /* Remove side padding to eliminate extra space */
+  position: relative; /* Allows positioning for child elements */
+  text-align: center;
+  background-color: #464646;
+  width: 100%; /* Ensure the footer spans the full width */
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.footer-social {
+  display: flex;
+  gap: 25px;
+
+  margin-bottom: 40px;
+}
+
+.footer-social a {
+  color: white; /* Social icon color */
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-bottom: 20px;
+}
+
+.footer-social a:hover {
+  color: rgb(45, 45, 45);
+}
+
+.copyright-txt {
+  position: absolute; /* Position it inside the footer */
+  bottom: 0px; /* Distance from the bottom of the footer */
+  left: 0; /* Align it exactly to the left edge */
+  font-size: 14px;
+  background-color: #000;
+  text-align: left; /* Align text to the left */
+  margin: 0; /* Remove default margin */
+  padding-left: 20px; /* Add padding if needed for spacing */
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.copyright-txt p {
+  padding: 10px;
+}
+
+.philosopher-txt {
+  position: absolute;
+  right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Navigation */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Hide navigation links initially */
+  .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Adjust based on nav height */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* When navigation is open */
+  .navigation.active {
+    display: flex;
+  }
+
+  .navigation a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  /* Section Text */
+  .section-txt {
+    padding: 15px;
+    height: auto;
+  }
+
+  .section-txt h2 {
+    font-size: 24px;
+  }
+
+  .section-txt p {
+    font-size: 16px;
+  }
+
+  /* Box Section */
+  .box-wrapp {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .box-wrapp div {
+    width: 90%;
+    min-width: unset;
+  }
+
+  /* Demo Section */
+  .demo-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .img-gallery {
+    display: flex; /* Switch to flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center images horizontally */
+    gap: 20px; /* Adjust spacing for mobile */
+  }
+
+  .card {
+    width: 100%; /* Make cards take up the full width of the container */
+    max-width: 300px; /* Optional: Limit max width */
+  }
+
+  /* Features Section */
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .features-list ul {
+    padding: 20px;
+  }
+
+  /* Footer */
+  .footer-wrap {
+    gap: 10px;
+  }
+  .footer-wrap {
+    padding: 30px;
+  }
+  .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .copyright-txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .philosopher-txt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
