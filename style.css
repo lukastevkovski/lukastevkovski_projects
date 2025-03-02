@@ -1,0 +1,166 @@
+.parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p1 {
+  background-image: url(./Images/lights.jpg);
+  height: 160px;
+}
+
+.p2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./Images/media.jpg");
+  height: 160px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-brand {
+  --bs-navbar-brand-color: unset;
+}
+
+.navbar-brand:hover {
+  color: white !important;
+}
+
+.navbar-nav {
+  --bs-nav-link-color: unset;
+  --bs-navbar-active-color: white;
+  --bs-navbar-hover-color: white;
+}
+
+.darkgray {
+  background-color: rgb(54, 54, 54);
+}
+
+nav .active {
+  border-left: 2px solid white;
+}
+
+#carouselExampleCaptions .carousel-item {
+  height: 80vh !important;
+}
+
+.carousel-caption {
+  bottom: unset;
+  top: 40%;
+}
+
+.btn-danger {
+  background-color: transparent;
+}
+
+.p3 {
+  background-image: url(Images/image1.jpg);
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.top-30 {
+  top: 30% !important;
+}
+
+@media screen and (max-width: 991px) {
+  .top-30 {
+    top: 30% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-lg-4 {
+    font-size: 1.5rem !important;
+  }
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.about .carousel,
+.about .carousel-item {
+  height: fit-content;
+  padding-bottom: 50px;
+}
+
+.about .carousel-caption {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-danger {
+  background-color: #db0c21 !important;
+}
+
+.filled .btn-danger {
+  background-color: #d62839 !important;
+  color: white !important;
+  border: none;
+}
+
+.filled .btn-danger:hover {
+  background-color: #b71c2c !important;
+}
+
+.card {
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.accordion-item {
+  border: 0;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.btn-danger:hover {
+  color: white !important;
+}
+
+.staff .row {
+  border-top: 1px solid #11111150;
+}
+
+.fs-8 {
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .navbar-toggler:not(.collapsed) + .navbar-collapse ul {
+    border-top: 1px solid #111;
+    padding-top: 20px;
+  }
+
+  .navbar-toggler:not(.collapsed) {
+    z-index: 1050;
+  }
+
+  .navbar-toggler:not(.collapsed) ~ .container-fluid {
+    margin-top: 100px;
+    transition: margin-top 0.3s ease-in-out;
+  }
+
+  .staff .row {
+    width: 50%;
+  }
+}
