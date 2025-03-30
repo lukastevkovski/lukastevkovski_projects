@@ -1,0 +1,25 @@
+-- List information about the movies
+SELECT m.name, m.premiere_city AS premiere_date, m.genre, m.country_of_origin, m.production_company, COUNT(ma.actor_id) AS num_actors
+FROM Movies m
+LEFT JOIN Movies_Actors ma ON m.movie_id = ma.movie_id
+GROUP BY m.movie_id;
+
+-- List all information for the actors
+SELECT a.first_name, a.last_name, a.nickname, a.date_of_birth, a.agent_code, COUNT(ma.movie_id) AS num_movies
+FROM Actors a
+LEFT JOIN Movies_Actors ma ON a.actor_id = ma.actor_id
+GROUP BY a.actor_id;
+
+-- List all movies with their information (Films only)
+SELECT m.name, m.premiere_city, f.first_week_earnings, f.premiere_format
+FROM Movies m
+JOIN Films f ON m.movie_id = f.film_id
+ORDER BY f.premiere_format;
+
+-- List all information about the Oscar winners
+SELECT o.actor_id, a.first_name, a.last_name, a.nickname, a.date_of_birth, a.agent_code, m.name AS movie_name, o.role, o.year
+FROM OscarWinners o
+JOIN Actors a ON o.actor_id = a.actor_id
+JOIN Films f ON o.film_id = f.film_id
+JOIN Movies m ON f.film_id = m.movie_id
+ORDER BY o.year DESC;

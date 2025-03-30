@@ -1,0 +1,87 @@
+INSERT INTO Movies (name, premiere_city, genre, country_of_origin, production_company, type) VALUES
+('The Matrix', 'Los Angeles', 'Sci-Fi', 'USA', 'Warner Bros', 'Film'),
+('Inception', 'New York', 'Sci-Fi', 'USA', 'Warner Bros', 'Film'),
+('The Godfather', 'Chicago', 'Drama', 'USA', 'Paramount', 'Film'),
+('Avatar', 'London', 'Sci-Fi', 'USA', '20th Century Fox', 'Film'),
+('The Dark Knight', 'Los Angeles', 'Action', 'USA', 'Warner Bros', 'Film'),
+('Breaking Bad', 'Albuquerque', 'Drama', 'USA', 'AMC', 'TVSeries'),
+('Game of Thrones', 'Belfast', 'Fantasy', 'USA', 'HBO', 'TVSeries'),
+('The Office', 'Scranton', 'Comedy', 'USA', 'NBC', 'TVSeries'),
+('Stranger Things', 'Atlanta', 'Sci-Fi', 'USA', 'Netflix', 'TVSeries'),
+('Friends', 'New York', 'Comedy', 'USA', 'NBC', 'TVSeries');
+
+-- Films
+INSERT INTO Films (film_id, first_week_earnings, premiere_format) VALUES
+(1, 50000000.00, '2D'),
+(2, 75000000.00, '3D'),
+(3, 30000000.00, '2D'),
+(4, 100000000.00, '3D'),
+(5, 85000000.00, '2D');
+
+-- TVSeries
+INSERT INTO TVSeries (series_id, tv_channel, num_episodes, num_seasons) VALUES
+(6, 'AMC', 62, 5),
+(7, 'HBO', 73, 8),
+(8, 'NBC', 201, 9),
+(9, 'Netflix', 34, 4),
+(10, 'NBC', 236, 10);
+
+-- Actors (10 rows)
+INSERT INTO Actors (first_name, last_name, nickname, date_of_birth, agent_code) VALUES
+('Keanu', 'Reeves', 'Neo', '1964-09-02', 'A001'),
+('Leonardo', 'DiCaprio', 'Leo', '1974-11-11', 'A002'),
+('Marlon', 'Brando', 'Godfather', '1924-04-03', 'A003'),
+('Sam', 'Worthington', 'Jake', '1976-08-02', 'A004'),
+('Christian', 'Bale', 'Batman', '1974-01-30', 'A005'),
+('Bryan', 'Cranston', 'Heisenberg', '1956-03-07', 'A006'),
+('Emilia', 'Clarke', 'Khaleesi', '1986-10-23', 'A007'),
+('Steve', 'Carell', 'Michael', '1962-08-16', 'A008'),
+('Millie', 'Brown', 'Eleven', '2004-02-19', 'A009'),
+('Jennifer', 'Aniston', 'Rachel', '1969-02-11', 'A010');
+
+-- Movies_Actors
+INSERT INTO Movies_Actors (movie_id, actor_id, payment) VALUES
+(1, 1, 10000000.00), (2, 2, 15000000.00), (3, 3, 5000000.00), (4, 4, 12000000.00), (5, 5, 18000000.00),
+(6, 6, 8000000.00), (7, 7, 9000000.00), (8, 8, 6000000.00), (9, 9, 7000000.00), (10, 10, 5000000.00);
+
+-- OscarWinners
+INSERT INTO OscarWinners (actor_id, film_id, role, year) VALUES
+(2, 2, 'Cobb', 2010),
+(3, 3, 'Vito Corleone', 1972),
+(5, 5, 'Bruce Wayne', 2008);
+
+-- Directors
+INSERT INTO Directors (first_name, last_name, genre_specialty, expertise) VALUES
+('Wachowski', 'Sisters', 'Sci-Fi', 'Visual Effects'),
+('Christopher', 'Nolan', 'Sci-Fi', 'Storytelling'),
+('Francis', 'Coppola', 'Drama', 'Cinematography'),
+('James', 'Cameron', 'Sci-Fi', 'Technology'),
+('Christopher', 'Nolan', 'Action', 'Directing');
+
+-- Films_Directors
+INSERT INTO Films_Directors (film_id, director_id, payment) VALUES
+(1, 1, 20000000.00), (2, 2, 25000000.00), (3, 3, 15000000.00), (4, 4, 30000000.00), (5, 5, 28000000.00);
+
+-- Critics
+INSERT INTO Critics (first_name, last_name, username, password) VALUES
+('Roger', 'Ebert', 'rebert', 'pass123'),
+('Peter', 'Travers', 'ptravers', 'pass456'),
+('Ann', 'Hornaday', 'ahornaday', 'pass789'),
+('Richard', 'Roeper', 'rroeper', 'pass101'),
+('A.O.', 'Scott', 'aoscott', 'pass202');
+
+-- Films_Critics
+INSERT INTO Films_Critics (film_id, critic_id, rating) VALUES
+(1, 1, 8.5), (2, 2, 9.0), (3, 3, 9.5), (4, 4, 8.0), (5, 5, 9.2);
+
+-- Actors_Critics
+INSERT INTO Actors_Critics (actor_id, film_id, critic_id, grade_acting, grade_expression, grade_naturalness, grade_devotion) VALUES
+(1, 1, 1, 8.0, 7.5, 8.5, 9.0),
+(2, 2, 2, 9.0, 8.5, 9.0, 9.5),
+(3, 3, 3, 9.5, 9.0, 9.5, 10.0),
+(4, 4, 4, 7.5, 7.0, 7.5, 8.0),
+(5, 5, 5, 9.0, 9.0, 8.5, 9.5);
+
+-- Sequels
+INSERT INTO Sequels (film_id, sequel_to_film_id) VALUES
+(5, 2);

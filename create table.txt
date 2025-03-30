@@ -1,0 +1,119 @@
+-- Movies table (parent table for Films and TVSeries)
+CREATE TABLE Movies (
+    movie_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    premiere_city VARCHAR(50),
+    genre VARCHAR(50),
+    country_of_origin VARCHAR(50),
+    production_company VARCHAR(100),
+    type ENUM('Film', 'TVSeries') NOT NULL
+);
+
+-- Films table
+CREATE TABLE Films (
+    film_id INT PRIMARY KEY,
+    first_week_earnings DECIMAL(15, 2),
+    premiere_format ENUM('2D', '3D'),
+    FOREIGN KEY (film_id) REFERENCES Movies(movie_id)
+);
+
+-- TVSeries table
+CREATE TABLE TVSeries (
+    series_id INT PRIMARY KEY,
+    tv_channel VARCHAR(50),
+    num_episodes INT,
+    num_seasons INT,
+    FOREIGN KEY (series_id) REFERENCES Movies(movie_id)
+);
+
+-- Actors table
+CREATE TABLE Actors (
+    actor_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    nickname VARCHAR(50),
+    date_of_birth DATE,
+    agent_code VARCHAR(10)
+);
+
+-- Movies_Actors junction table
+CREATE TABLE Movies_Actors (
+    movie_id INT,
+    actor_id INT,
+    payment DECIMAL(15, 2),
+    PRIMARY KEY (movie_id, actor_id),
+    FOREIGN KEY (movie_id) REFERENCES Movies(movie_id),
+    FOREIGN KEY (actor_id) REFERENCES Actors(actor_id)
+);
+
+-- OscarWinners table
+CREATE TABLE OscarWinners (
+    oscar_id INT PRIMARY KEY AUTO_INCREMENT,
+    actor_id INT,
+    film_id INT,
+    role VARCHAR(50),
+    year INT,
+    FOREIGN KEY (actor_id) REFERENCES Actors(actor_id),
+    FOREIGN KEY (film_id) REFERENCES Films(film_id)
+);
+
+-- Directors table
+CREATE TABLE Directors (
+    director_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    genre_specialty VARCHAR(50),
+    expertise VARCHAR(50)
+);
+
+-- Films_Directors table
+CREATE TABLE Films_Directors (
+    film_id INT PRIMARY KEY,
+    director_id INT NOT NULL,
+    payment DECIMAL(15, 2),
+    FOREIGN KEY (film_id) REFERENCES Films(film_id),
+    FOREIGN KEY (director_id) REFERENCES Directors(director_id)
+);
+
+-- Critics table
+CREATE TABLE Critics (
+    critic_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(50)
+);
+
+-- Films_Critics junction table
+CREATE TABLE Films_Critics (
+    film_id INT,
+    critic_id INT,
+    rating DECIMAL(3, 1),
+    PRIMARY KEY (film_id, critic_id),
+    FOREIGN KEY (film_id) REFERENCES Films(film_id),
+    FOREIGN KEY (critic_id) REFERENCES Critics(critic_id)
+);
+
+-- Actors_Critics junction table
+CREATE TABLE Actors_Critics (
+    actor_id INT,
+    film_id INT,
+    critic_id INT,
+    grade_acting DECIMAL(3, 1),
+    grade_expression DECIMAL(3, 1),
+    grade_naturalness DECIMAL(3, 1),
+    grade_devotion DECIMAL(3, 1),
+    PRIMARY KEY (actor_id, film_id, critic_id),
+    FOREIGN KEY (actor_id) REFERENCES Actors(actor_id),
+    FOREIGN KEY (film_id) REFERENCES Films(film_id),
+    FOREIGN KEY (critic_id) REFERENCES Critics(critic_id)
+);
+
+-- Sequels table
+CREATE TABLE Sequels (
+    sequel_id INT PRIMARY KEY AUTO_INCREMENT,
+    film_id INT,
+    sequel_to_film_id INT,
+    FOREIGN KEY (film_id) REFERENCES Films(film_id),
+    FOREIGN KEY (sequel_to_film_id) REFERENCES Films(film_id)
+);
