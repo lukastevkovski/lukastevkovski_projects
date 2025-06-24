@@ -11,7 +11,6 @@ html {
   font-family: Arial, sans-serif;
 }
 
-/* Fullscreen hero (for index.php) */
 .hero {
   background: url("./assets/laptop.jpg") no-repeat center center/cover;
   height: 100vh;
@@ -42,7 +41,6 @@ html {
   font-size: 1rem;
 }
 
-/* Form page styling (for items.php) */
 body.form-page {
   background-color: #e9ecef;
   padding: 20px;
@@ -88,7 +86,7 @@ form {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: url("../images/hero.jpg") no-repeat center;
+  background: url("./assets/laptop.jpg") no-repeat center;
   background-size: contain;
 }
 
