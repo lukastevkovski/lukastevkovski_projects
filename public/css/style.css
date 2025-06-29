@@ -1,0 +1,21 @@
+body {
+  background-color: #f8f9fa;
+}
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container {
+  max-width: 1200px;
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+.form-control,
+.btn {
+  margin-bottom: 10px;
+}
+.table th,
+.table td {
+  vertical-align: middle;
+}
