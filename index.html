@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Book Tracker</h1>
+
+    <section id="bookList">
+      <h2>Book Status</h2>
+      <ul></ul>
+    </section>
+
+    <table id="bookTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Progress</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="bookTableBody"></tbody>
+    </table>
+
+    <form id="bookForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required />
+      <label for="author">Author:</label>
+      <input type="text" id="author" required />
+      <label for="maxPages">Total Pages:</label>
+      <input type="number" id="maxPages" min="1" required />
+      <label for="onPage">Current Page:</label>
+      <input type="number" id="onPage" min="0" required />
+      <button type="submit">Add Book</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
